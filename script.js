@@ -91,11 +91,17 @@ function finalizarCompra() {
   const formularioCompra = document.createElement('div');
   formularioCompra.innerHTML = `
     <h2>Finalizar Compra</h2>
-    <input type="text" id="nome-cliente" placeholder="Nome">
-    <input type="text" id="cpf-cliente" placeholder="CPF">
-    <textarea id="endereco-cliente" placeholder="Endereço"></textarea>
-    <button onclick="confirmarCompra()">Confirmar Compra</button>
-  `;
+  <input type="text" id="nome-cliente" placeholder="Nome">
+  <input type="text" id="cpf-cliente" placeholder="CPF">
+  <textarea id="endereco-cliente" placeholder="Endereço"></textarea>
+  <select id="metodo-pagamento">
+    <option value="" disabled selected>Escolha o método de pagamento</option>
+    <option value="cartao-credito">Cartão de Crédito</option>
+    <option value="boleto-bancario">Boleto Bancário</option>
+    <option value="pix">Pix</option>
+  </select>
+  <button onclick="confirmarCompra()">Confirmar Compra</button>
+`;
   document.body.appendChild(formularioCompra);
 }
 
@@ -104,13 +110,14 @@ function confirmarCompra() {
   const nome = document.getElementById('nome-cliente').value;
   const cpf = document.getElementById('cpf-cliente').value;
   const endereco = document.getElementById('endereco-cliente').value;
+  const metodoPagamento = document.getElementById('metodo-pagamento').value;
 
   if (!nome || !cpf || !endereco) {
     alert('Por favor, preencha todos os campos!');
     return;
   }
 
-  alert(`Compra confirmada!\nNome: ${nome}\nCPF: ${cpf}\nEndereço: ${endereco}`);
+  alert(`Compra confirmada!\nNome: ${nome}\nCPF: ${cpf}\nEndereço: ${endereco}\n Metodo de Pagamento: ${metodoPagamento}`);
   localStorage.removeItem('carrinho');
   location.reload();
 }
