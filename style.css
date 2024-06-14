@@ -23,7 +23,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%; /* Ajuste a largura aqui, se necessário */
+  width: 100%;
 }
 
 .product img, .cart-item img, .product-admin img {
@@ -40,14 +40,17 @@ button {
   display: block;
   margin: 10px 0;
   padding: 10px;
-  background-color: #28a745;
+  background-color: #3bb3c9;
   color: white;
   border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 button:hover {
-  background-color: #218838;
+  background-color: #3595c5; 
+  transform: translateY(-2px);
 }
 
 #formulario-compra, #formulario-edicao {
