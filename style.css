@@ -1,0 +1,72 @@
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+#lista-produtos, #carrinho, #lista-produtos-admin {
+  margin-bottom: 20px;
+}
+
+.product, .cart-item, .product-admin {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Ajuste a largura aqui, se necessário */
+}
+
+.product img, .cart-item img, .product-admin img {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#formulario-compra, #formulario-edicao {
+  display: none;
+}
+
+#formulario-compra input, #formulario-edicao input, #formulario-edicao textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#carrinho h2 {
+  margin-bottom: 10px;
+}
+
+.product {
+  width: calc(100% - 20px);
+  margin: 10px auto;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Admin - Mercadinho Digital</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <button onclick="irParaProdutos()">Produtos</button>
+</head>
+
+<body onload="verificarAutenticacao()">
+  <div class="container">
+    <h1>Painel Administrativo</h1>
+    <input type="hidden" id="produto-index">
+    <input type="text" id="nome-produto" placeholder="Nome do Produto">
+    <input type="text" id="preco-produto" placeholder="Preço do Produto">
+    <textarea id="descricao-produto" placeholder="Descrição do Produto"></textarea>
+    <input type="text" id="imagem-produto" placeholder="URL da Imagem do Produto">
+    <button id="btn-adicionar" onclick="adicionarOuEditarProduto()">Adicionar Produto</button>
+    <div id="lista-produtos-admin"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+
+</html>
